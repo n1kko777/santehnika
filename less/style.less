@@ -1,6 +1,5 @@
 body {
     font-size: 10px;
-    overflow: hidden;
 }
 
 /* Mixins */
@@ -20,7 +19,7 @@ body {
 }
 
 .boxShadow {
-	box-shadow: 0 0 2.5rem rgba(219, 219, 219, 0.5);
+	box-shadow: 0 3px 6px rgba(0,0,0,.034), 0 3px 6px rgba(0,0,0,.096);
 }
 
 .trs {
@@ -31,11 +30,28 @@ body {
 @hoverEff: #f9c263;
 
 /* Default classes */
-.d-n {
+.d-n,
+.mobile-icons,
+nav {
 	display: none;
 }
 .modal-open {
-    overflow: hidden;
+  overflow: hidden;
+}
+.r-0 {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+/* Animations */
+
+@keyframes appiared {
+	from {
+		background-color: rgba(255,255,255, .1);		
+	}
+	to {
+		background-color: rgba(255,255,255, .9);
+	}
 }
 
 /* Floating blocks */
@@ -77,6 +93,7 @@ body {
 }
 
 .search-block {
+	overflow: scroll;
 	z-index: 10;
 	display: none;
 	position: fixed;
@@ -119,15 +136,6 @@ body {
 	}
 }
 
-@keyframes appiared {
-	from {
-		background-color: rgba(255,255,255, .1);		
-	}
-	to {
-		background-color: rgba(255,255,255, .9);
-	}
-}
-
 .hamburger {
 	position: fixed;
 	top: 1.5rem;
@@ -142,7 +150,6 @@ body {
 
 	span {
 		.trs;
-
 	}
 	span:nth-child(1) {
 		position: absolute;
@@ -204,6 +211,7 @@ body {
 }
 
 .menu {
+	overflow: scroll;
 	transform: translateX(100%);
 	transition: all .4s;
 
@@ -252,7 +260,9 @@ body {
 
 /* Main page */
 .main {
-    background: url('../img/main-bg.jpg') no-repeat;
+	padding-left: 4rem;
+	background-color: #aeaeae;
+    /* background: url('../img/main-bg.jpg') no-repeat; */
     background-size: cover;
 
     &-block {
@@ -293,7 +303,9 @@ body {
 
 .categories {
 	background-color: #f0f0f0;
-	padding: 5rem 0;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	padding-left: 4rem;
 
 	&-card {
 		min-height: 35rem;
@@ -348,7 +360,9 @@ body {
 }
 
 .brand {
-	padding: 3rem 4rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	padding-left: 4rem;
 	&-logo {
 		margin: 1rem auto;
 		max-width: 95%;
@@ -358,7 +372,7 @@ body {
 footer {
 	.regular;
 	background-color: #333333;
-	padding: 2.5rem;
+	padding: 4rem;
 	color: #fff;
 	font-size: 1.2rem;
 	a {
@@ -401,11 +415,242 @@ footer {
 
 
 /* Media requests */
-// Extra Small devices
+// Mega Extra Small devices
+@media (max-width: 490px) { 
+	body {
+		font-size: 2px;
+	}
+
+	.modal-open {
+	    position: relative;
+	}
+
+	nav {
+		display: block;
+		background-color: #fff;
+		.boxShadow;
+		.mobile-nav {
+			height: 4rem;
+			&-logo {
+				height: 4rem;
+				display: flex;
+				align-items: center;
+				&_img {
+					display: block;
+				}
+				&_name {
+					.regular;
+					display: block;
+					font-size: .6rem;
+					letter-spacing: -.11rem;
+				}
+			}
+			&-hamburger {
+				position: fixed;
+				top: .7rem;
+				right: 1rem;
+				cursor: pointer;
+				background-color: #fff;
+				border-radius: 50%;
+				width: 3.2rem;
+				height: 3.2rem;
+				z-index: 10;
+
+				span {
+					.trs;
+				}
+				span:nth-child(1) {
+					position: absolute;
+					top: 32%;
+					left: 28%;
+					display: block;
+					background-color: #ccc;
+					height: .15rem;
+					width: 45%;
+				}
+				span:nth-child(2) {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translateX(-50%) translateY(-50%);
+					display: block;
+					background-color: #ccc;
+					height: .15rem;
+					width: 45%;
+				}
+
+				span:nth-child(3) {
+					position: absolute;
+					top: 62%;
+					left: 28%;
+					display: block;
+					background-color: #ccc;
+					height: .15rem;
+					width: 45%;
+				}
+				.close {
+					&:nth-child(1) {
+						position: absolute;
+						top: 47%;
+						left: 27%;
+						transform: rotate(45deg);
+						display: block;
+						background-color: #ccc;
+						height: .18rem;
+						width: 45%;
+						background-color: #f9c263;
+					}
+					&:nth-child(2) {
+						display: none;
+					}
+					
+					&:nth-child(3) {
+						position: absolute;
+						top: 47%;
+						left: 27%;
+						transform: rotate(-45deg);
+						display: block;
+						background-color: #ccc;
+						height: .18rem;
+						width: 45%;
+						background-color: #f9c263;
+					}
+				}
+			}
+		}
+	}
+
+	.sidebar,
+	.hamburger {
+		display: none;
+	}
+
+	.menu {
+		width: 100%;
+		.navigation {
+				padding-right: 2rem;
+				padding-top: 5.5rem;
+			a {
+				font-size: 1.1rem;
+				.trs;
+				&:hover {
+					.bold;
+					color: @hoverEff;
+				}
+				img {
+					vertical-align: middle;
+					display: inline-block;
+					margin-left: 1.3rem;
+				}
+			}
+		}
+		.mobile-icons {
+			position: relative;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			display: block;
+			.sidebar {
+				&-menu {
+					width: 100%;
+					margin: 1rem auto;
+					text-align: center; 
+					&_item {
+						display: inline-block;
+						width: 1.6rem;
+						height: 1.6rem;
+						margin: 0 2.1rem;
+						img {
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.main,
+	.categories,
+	.brand {
+		padding-left: 0;
+	}
+
+	.search-block {
+		padding-left: 1rem;
+		&_form {
+			&-input {
+				font-size: 2rem;
+				width: 85%;
+			}
+			&-helpText {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.main {
+	    &-block {
+	    	height: 45rem;
+	      &_title {
+	          font-size: 2.6rem;
+	      }
+	      &_text {
+	          font-size: 1rem;
+	      }
+	      &_btn {
+	          font-size: 1.3rem;
+	          border-radius: 3rem;
+	          padding: 1.3rem 2rem;
+	      }
+			}
+	}
+
+	.categories {
+		&-card {
+			padding: 3rem 1rem;
+		}
+		&-title {
+			font-size: 2.3rem;
+		}
+		&-text {
+			font-size: 1.2rem;
+		}
+		&-btn {
+			font-size: 1.2rem;
+			padding: .3rem .8rem;
+			margin-top: 2.5rem;
+		}
+	}
+
+
+	footer {
+		padding: 2rem;
+		.block-info-logo,
+		.block-info-call,
+		.block-info-categories,
+		.block-info-pay  {
+			margin: 1rem auto;
+		}
+	}
+
+}
+
 @media (max-width: 576px) { 
 	body {
 		font-size: 2px;
-	}	
+	}
+
+	footer {
+		.block-info-logo,
+		.block-info-call,
+		.block-info-categories,
+		.block-info-pay  {
+			width: 80%;
+			margin: 1rem auto;
+		}
+	}
+
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -435,4 +680,13 @@ footer {
 		font-size: 12px;
 	}
 }
- 
+
+// landScape orientation
+@media screen and (orientation: landscape) and (max-height: 430px) {
+	.sidebar {
+		overflow: scroll;
+	}
+	.modal-open {
+	    position: relative;
+	}
+}
