@@ -1,2 +1,4 @@
-# Landing page clean html css js
-p.s. Bootstrap grid only))
+# Landing page 
+# Clean html css js
+# Full adaptive
+# p.s. Bootstrap grid only))
