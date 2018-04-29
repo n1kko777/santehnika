@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", function() {
     sidebar = document.querySelectorAll(".sidebar-menu_item"),
     searchBlock = document.querySelector(".search-block"),
 	closeSearchBlock = document.querySelector(".search-block_form-input_close");
+	
 	searchBlock.style.display = "none";
 
   sidebar[2].addEventListener("click", event => {

@@ -5,7 +5,8 @@
 }
 
 body {
-    font-size: 10px;
+	font-size: 10px;
+	min-width: 320px;
 }
 
 a {
@@ -35,24 +36,24 @@ img {
 
 @font-face {
     font-family: 'Roboto-Bold';
-    src: url('RobotoCondensed-Bold.eot');
-    src: url('RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),
-        url('RobotoCondensed-Bold.woff2') format('woff2'),
-        url('RobotoCondensed-Bold.woff') format('woff'),
-        url('RobotoCondensed-Bold.ttf') format('truetype'),
-        url('RobotoCondensed-Bold.svg#RobotoCondensed-Bold') format('svg');
+    src: url('../fonts/RobotoCondensed-Bold.eot');
+    src: url('../fonts/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Bold.woff') format('woff'),
+        url('../fonts/RobotoCondensed-Bold.ttf') format('truetype'),
+        url('../fonts/RobotoCondensed-Bold.svg#RobotoCondensed-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('RobotoCondensed-Light.eot');
-    src: url('RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'),
-        url('RobotoCondensed-Light.woff2') format('woff2'),
-        url('RobotoCondensed-Light.woff') format('woff'),
-        url('RobotoCondensed-Light.ttf') format('truetype'),
-        url('RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg');
+    src: url('../fonts/RobotoCondensed-Light.eot');
+    src: url('../fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoCondensed-Light.woff2') format('woff2'),
+        url('../fonts/RobotoCondensed-Light.woff') format('woff'),
+        url('../fonts/RobotoCondensed-Light.ttf') format('truetype'),
+        url('../fonts/RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg');
     font-weight: 300;
     font-style: normal;
 }
@@ -76,7 +77,7 @@ img {
 }
 
 .trs {
-  transition: all 0.5s ease;	
+  transition: all 0.7s ease;	
 }
 
 /* Varibles */
@@ -188,128 +189,6 @@ nav {
 	}
 }
 
-.hamburger {
-	position: fixed;
-	top: 1.5rem;
-	right: 3rem;
-	cursor: pointer;
-	background-color: #fff;
-	border-radius: 50%;
-	width: 3rem;
-	height: 3rem;
-	z-index: 10;
-	.boxShadow;
-
-	span {
-		.trs;
-	}
-	span:nth-child(1) {
-		position: absolute;
-		top: 32%;
-		left: 28%;
-		display: block;
-		background-color: #ccc;
-		height: .18rem;
-		width: 45%;
-	}
-	span:nth-child(2) {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translateX(-50%) translateY(-50%);
-		display: block;
-		background-color: #ccc;
-		height: .18rem;
-		width: 45%;
-	}
-
-	span:nth-child(3) {
-		position: absolute;
-		top: 62%;
-		left: 28%;
-		display: block;
-		background-color: #ccc;
-		height: .18rem;
-		width: 45%;
-	}
-	.close {
-		&:nth-child(1) {
-			position: absolute;
-			top: 47%;
-			left: 27%;
-			transform: rotate(45deg);
-			display: block;
-			background-color: #ccc;
-			height: .18rem;
-			width: 45%;
-			background-color: #f9c263;
-		}
-		&:nth-child(2) {
-			display: none;
-		}
-		
-		&:nth-child(3) {
-			position: absolute;
-			top: 47%;
-			left: 27%;
-			transform: rotate(-45deg);
-			display: block;
-			background-color: #ccc;
-			height: .18rem;
-			width: 45%;
-			background-color: #f9c263;
-		}
-	}
-}
-
-.menu {
-	overflow: scroll;
-	transform: translateX(100%);
-	transition: all .4s;
-
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 27rem;
-	max-width: 100%;
-	background-color: #fff;
-	height: 100vh;
-	z-index: 9;
-	.navigation {
-			text-align: right;
-			padding-right: 2.5rem;
-			padding-top: 8rem;
-		li {
-			padding: 1rem 0;
-		}
-		a {
-			.regular;
-			color: #c1c1c1;
-			font-size: 1.4rem;
-			text-decoration: none; 
-			text-transform: uppercase;
-			letter-spacing: 0.045rem;
-			line-height: 2.3;
-			.trs;
-			&:hover {
-				.bold;
-				color: @hoverEff;
-			}
-
-			img {
-				vertical-align: middle;
-				display: inline-block;
-				margin-left: 1.3rem;
-			}
-		}
-	}
-}
-
-.open {
-	transform: translateX(0%);
-	.boxShadow;
-}
-
 /* Main page */
 .main {
 	padding-left: 4rem;
@@ -337,7 +216,8 @@ nav {
           font-size: 1.4rem;
       }
       &_btn {
-          .bold;
+		  .bold;
+		  cursor: pointer;
           text-decoration: none;
           font-size: 1.2rem;
           color: #000;
@@ -357,18 +237,103 @@ nav {
 	background-color: #f0f0f0;
 	padding-top: 5rem;
 	padding-bottom: 5rem;
-	padding-left: 4rem;
+	padding-left: 2rem;
 	&-card {
-		.bold;
-		color: #fff;
-		font-size: 1.6rem;
-		text-align: center;
+		position: relative;
+		cursor: pointer;
 		background-color: rgb(160, 146, 146);
-		height: 2rem;
 		margin: 1rem;
-
+		&-text {
+			.regular;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			text-align: center;
+			color: #fff;
+			cursor: pointer;
+			font-size: 3rem;
+			.trs;
+			&:hover {
+				.bold;
+				font-size: 5rem;
+			} 
+		}
 	}
 	
+}
+
+.bathroom-bg{
+	height: 30rem;
+	background-image: url('../img/items/bathroom.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.faucet-bg{	
+	height: 30rem;
+	background-image: url('../img/items/faucet.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.sink-bg{
+	height: 30rem;
+	background-image: url('../img/items/sink.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.showercabin-bg{
+	height: 30rem;
+	background-image: url('../img/items/showercabin.jpg');
+	background-size: cover;
+	background-position: right;
+}
+.instalation-bg{
+	height: 30rem;
+	background-image: url('../img/items/instalation.jpg');
+	background-size: cover;
+	background-position: right;
+}
+.toiletandbidet-bg{
+	height: 30rem;
+	background-image: url('../img/items/toiletandbidet.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.towelheated-bg{
+	height: 30rem;
+	background-image: url('../img/items/towelheated.jpg');
+	background-size: cover;
+	background-position: top;
+}
+.tile-bg{
+	height: 30rem;
+	background-image: url('../img/items/tile.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.hotfloor-bg{
+	height: 30rem;
+	background-image: url('../img/items/hotfloor.jpg');
+	background-size: cover;
+}
+.bathroomfurniture-bg{
+	height: 30rem;
+	background-image: url('../img/items/bathroomfurniture.jpeg');
+	background-size: cover;
+	background-position: center;
+}
+
+.bathroom-bg,
+.faucet-bg,
+.sink-bg,
+.showercabin-bg,
+.instalation-bg,
+.toiletandbidet-bg,
+.towelheated-bg,
+.tile-bg,
+.hotfloor-bg,
+.bathroomfurniture-bg {
+	width: 100%;
 }
 
 .brand {
@@ -392,11 +357,10 @@ footer {
 		display: block;
 		text-decoration: none;
 		color: #fff;
-		vertical-align: middle;
 		margin-bottom: .5rem;
 		.trs;
 		&:hover {
-			.bold;
+			.regular;
 			color: @hoverEff;
 		}
 		picture {
@@ -532,56 +496,10 @@ footer {
 		}
 	}
 
-	.sidebar,
-	.hamburger {
+	.sidebar {
 		display: none;
 	}
 
-	.menu {
-		width: 100%;
-		.navigation {
-				padding-right: 2rem;
-				padding-top: 5.5rem;
-			a {
-				font-size: 1.1rem;
-				.trs;
-				&:hover {
-					.bold;
-					color: @hoverEff;
-				}
-				img {
-					vertical-align: middle;
-					display: inline-block;
-					margin-left: 1.3rem;
-				}
-			}
-		}
-		.mobile-icons {
-			position: relative;
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			display: block;
-			.sidebar {
-				&-menu {
-					width: 100%;
-					margin: 1rem auto;
-					text-align: center; 
-					&_item {
-						display: inline-block;
-						width: 1.6rem;
-						height: 1.6rem;
-						margin: 0 2.1rem;
-						img {
-							cursor: pointer;
-						}
-					}
-				}
-			}
-		}
-	}
-	
 	.main,
 	.categories,
 	.brand {
@@ -618,11 +536,6 @@ footer {
 			}
 	}
 
-	.categories {
-		
-	}
-
-
 	footer {
 		padding: 2rem;
 		.block-info-logo,
@@ -638,6 +551,19 @@ footer {
 @media (max-width: 576px) { 
 	body {
 		font-size: 2px;
+	}
+
+	.bathroom-bg,
+	.faucet-bg,
+	.sink-bg,
+	.showercabin-bg,
+	.instalation-bg,
+	.toiletandbidet-bg,
+	.towelheated-bg,
+	.tile-bg,
+	.hotfloor-bg,
+	.bathroomfurniture-bg {
+		width: auto;
 	}
 
 	footer {
@@ -677,6 +603,12 @@ footer {
 @media (min-width: 1200px) {
 	body {
 		font-size: 12px;
+	}
+
+	.categories {
+		.container-fluid {
+			max-width: 1360px;
+		}
 	}
 }
 
