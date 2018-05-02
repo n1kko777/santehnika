@@ -2,9 +2,13 @@ window.addEventListener("DOMContentLoaded", function() {
   let navHamburger = document.getElementById("nav-hamburger"),
     sidebar = document.querySelectorAll(".sidebar-menu_item"),
     searchBlock = document.querySelector(".search-block"),
-	closeSearchBlock = document.querySelector(".search-block_form-input_close");
-	
-	searchBlock.style.display = "none";
+    closeSearchBlock = document.querySelector(".search-block_form-input_close"),
+    url = window.location.origin;
+
+    console.log(url);
+    
+
+  searchBlock.style.display = "none";
 
   sidebar[2].addEventListener("click", event => {
     document.body.classList.toggle("modal-open");
