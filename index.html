@@ -51,6 +51,30 @@
                 </div>
             </div>
         </div>
+        <div class="mobile-nav-dropdown d-n">
+            <div class="container">
+                <ul class="mobile-nav-dropdown-menu">
+                    <li>
+                        <picture>
+                            <source type="image/svg+xml" srcset="img/icons/home.svg">
+                            <img src="img/icons/home.png" alt="Главная" title="Главная">
+                        </picture> Главная</li>
+                    <li>
+                        <picture>
+                            <source type="image/svg+xml" srcset="img/icons/basket.svg">
+                            <img src="img/icons/basket.png" alt="Корзина" title="Корзина">
+                        </picture> Корзина</li>
+                    <li>
+                        <picture>
+                            <source type="image/svg+xml" srcset="img/icons/search.svg">
+                            <img src="img/icons/search.png" alt="Поиск" title="Поиск">
+                        </picture> Поиск</li>
+                    <li>
+                        <a href="tel:+73432680555">8 (343) 268 05 55</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <div class="sidebar">
         <div class="sidebar-logo">
@@ -77,12 +101,74 @@
             </li>
         </ul>
     </div>
-    <div class="search-block">
+    <div class="basket d-n">
+        <span class="basket_close">&times;</span>
+        <div class="basket-card">
+            <img class="basket-card-photo" src="img/main-bg.jpg" alt="">
+            <div class="basket-card-info">
+                <h4 class="basket-card-info-title">Заголовок</h4>
+                <p class="basket-card-info-text">Далеко-далеко за словесными горами в стране.</p>
+            </div>
+            <span class="basket-card-price">990 &#8381;</span>
+            <span class="basket-card-remove">&times;</span>
+        </div>
+        <div class="basket-card">
+            <img class="basket-card-photo" src="img/main-bg.jpg" alt="">
+            <div class="basket-card-info">
+                <h4 class="basket-card-info-title">Заголовок</h4>
+                <p class="basket-card-info-text">Далеко-далеко за словесными горами в стране.</p>
+            </div>
+            <span class="basket-card-price">990 &#8381;</span>
+            <span class="basket-card-remove">&times;</span>
+        </div>
+        <div class="basket-card">
+            <img class="basket-card-photo" src="img/main-bg.jpg" alt="">
+            <div class="basket-card-info">
+                <h4 class="basket-card-info-title">Заголовок</h4>
+                <p class="basket-card-info-text">Далеко-далеко за словесными горами в стране.</p>
+            </div>
+            <span class="basket-card-price">990 &#8381;</span>
+            <span class="basket-card-remove">&times;</span>
+        </div>
+
+        <button class="basket-buy">Оформить заказ</button>
+    </div>
+    <div class="search-block d-n">
         <form class="search-block_form">
-            <input type="text" class="search-block_form-input" autofocus>
+            <input type="text" class="search-block_form-input">
+            <div class="search-block_form-placeholder">
+                <img src="img/icons/search.png" alt=""> Поиск
+            </div>
             <span class="search-block_form-input_close">&times;</span>
             <p class="search-block_form-helpText">Введите интересующий Вас продукт</p>
         </form>
+        <div class="search-block_resault">
+            <h3>Результаты поиска</h3>
+            <div class="main-card">
+                <img class="main-card-photo" src="img/main-bg.jpg" alt="">
+                <h4 class="main-card-title">Заголовок</h4>
+                <p class="main-card-text">Далеко-далеко за словесными горами в стране.</p>
+                <span class="main-card-price">990 &#8381;</span>
+                <button class="main-card-buy">Купить</button>
+                <button class="main-card-basket">В корзину</button>
+            </div>
+            <div class="main-card">
+                <img class="main-card-photo" src="img/main-bg.jpg" alt="">
+                <h4 class="main-card-title">Заголовок</h4>
+                <p class="main-card-text">Далеко-далеко за словесными горами в стране.</p>
+                <span class="main-card-price">990 &#8381;</span>
+                <button class="main-card-buy">Купить</button>
+                <button class="main-card-basket">В корзину</button>
+            </div>
+            <div class="main-card">
+                <img class="main-card-photo" src="img/main-bg.jpg" alt="">
+                <h4 class="main-card-title">Заголовок</h4>
+                <p class="main-card-text">Далеко-далеко за словесными горами в стране.</p>
+                <span class="main-card-price">990 &#8381;</span>
+                <button class="main-card-buy">Купить</button>
+                <button class="main-card-basket">В корзину</button>
+            </div>
+        </div>
     </div>
 
     <section class="main">
@@ -91,9 +177,12 @@
                 <h1 class="main-block_title">Современные материалы и технологии для Вашего дома</h1>
                 <p class="main-block_text">Комплексные поставки материалов, оборудования, для чистовой отделки помещений, комплектации сетей и коммуникаций
                     от надёжных производителей на выгодных условиях. Монтажные работы под ключ. Гарантийное и постгарантийное
-                    сопровождение.</p>
+                    сопровождение.
+                </p>
                 <button class="main-block_btn">Узнать больше</button>
-                <div class="main-block_phone"><a href="#">8 (800) 000 00 00</a></div>   
+                <div class="main-block_phone">
+                    <a href="#">8 (800) 000 00 00</a>
+                </div>
             </div>
         </div>
     </section>
