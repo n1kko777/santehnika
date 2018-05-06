@@ -238,7 +238,7 @@ nav {
     }
     &-helpText {
       .light;
-      display: none;
+      opacity: 0;
       padding-top: 0.2rem;
       font-size: 1.2rem;
       color: rgba(0, 0, 0, 0.4);
@@ -326,13 +326,13 @@ nav {
   position: relative;
   background-color: #fff;
   min-height: 5rem;
-  width: 80%;
+  width: 85%;
   &-photo {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     width: 10rem;
-    margin-right: 1rem;
+    margin: 1rem;
     cursor: pointer;
   }
   &-info {
@@ -350,10 +350,12 @@ nav {
   }
   &-price {
     .bold;
-    margin: 0 1rem 1rem 1rem;
+    margin: 1rem;
     display: inline-block;
     vertical-align: middle;
+    width: 25%;
     font-size: 1.8rem;
+    text-align: center;
   }
   &-remove {
     .light;
@@ -721,13 +723,6 @@ footer {
     }
     &-buy {
       right: 2rem;
-    }
-  }
-
-  .basket-card {
-    width: 90%;
-    &-photo {
-      margin: 1rem;
     }
   }
 

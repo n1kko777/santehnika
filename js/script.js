@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", function() {
     searchBlock = document.querySelector(".search-block"),
     searchForm = document.querySelector(".search-block_form"),
     searchInput = document.querySelector(".search-block_form-input"),
+    searchHelpText = document.querySelector(".search-block_form-helpText"),
     searchPlaceholder = document.querySelector(
       ".search-block_form-placeholder"
     ),
@@ -41,7 +42,12 @@ window.addEventListener("DOMContentLoaded", function() {
 
   /* toggle basket block */
   sidebar[1].addEventListener("click", () => {
-    toggleBlock(basket);
+    if ( !searchBlock.classList.contains('d-n') ) {
+      toggleBlock(searchBlock);
+      toggleBlock(basket);
+    } else {
+      toggleBlock(basket);
+    }
   });
   closeBasket.addEventListener("click", () => {
     toggleBlock(basket);
@@ -49,7 +55,12 @@ window.addEventListener("DOMContentLoaded", function() {
 
   /* toggle search block */
   sidebar[2].addEventListener("click", () => {
-    toggleBlock(searchBlock);
+    if ( !basket.classList.contains('d-n') ) {
+      toggleBlock(basket);
+      toggleBlock(searchBlock);
+    } else {
+      toggleBlock(searchBlock);
+    }
   });
   closeSearchBlock.addEventListener("click", () => {
     toggleBlock(searchBlock);
@@ -63,16 +74,19 @@ window.addEventListener("DOMContentLoaded", function() {
       target.classList.contains("search-block_form-input")
     ) {
       searchPlaceholder.style.opacity = "0";
+      searchHelpText.style.opacity = "1";
       searchInput.focus();
     }
   });
   searchInput.addEventListener("focus", () => {
     searchPlaceholder.style.opacity = "0";
+    searchHelpText.style.opacity = "1";
     searchInput.focus();
   }); /* focus */
   searchInput.addEventListener("blur", () => {
     if (searchInput.value === "") {
       searchPlaceholder.style.opacity = "1";
+      searchHelpText.style.opacity = "0";
     }
   }); /* blur */
 
