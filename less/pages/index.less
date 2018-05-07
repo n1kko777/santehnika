@@ -1,0 +1,163 @@
+.main {
+  padding-left: 4rem;
+  background-color: #aeaeae;
+  /* background: url('../img/main-bg.jpg') no-repeat; */
+  background-size: cover;
+
+  &-block {
+    display: block;
+    padding-top: 30vh;
+    padding-bottom: 6rem;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    &_title {
+      .regular;
+      font-size: 3rem;
+      letter-spacing: 0.5rem;
+    }
+    &_text {
+      .light;
+      margin: 4rem 2rem;
+      font-size: 1.4rem;
+      font-style: italic;
+      text-transform: lowercase;
+    }
+    &_btn {
+      .bold;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #000;
+      background-color: #fff;
+      border-radius: 5rem;
+      padding: 1.5rem 3rem;
+      .boxShadow;
+      .trs;
+      &:hover {
+        background-color: @hoverEff;
+      }
+    }
+    &_phone {
+      margin-top: 8rem;
+      a {
+        .regular;
+        color: #fff;
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
+.categories {
+  background-color: #f0f0f0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  &-card {
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(160, 146, 146);
+    margin: 1rem;
+    &-text {
+      .regular;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+      font-size: 3rem;
+      .trs;
+      &:hover {
+        .bold;
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+.bathroom-bg {
+  height: 30rem;
+  background-image: url("../img/items/bathroom.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.faucet-bg {
+  height: 30rem;
+  background-image: url("../img/items/faucet.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.sink-bg {
+  height: 30rem;
+  background-image: url("../img/items/sink.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.showercabin-bg {
+  height: 30rem;
+  background-image: url("../img/items/showercabin.jpg");
+  background-size: cover;
+  background-position: right;
+}
+.instalation-bg {
+  height: 30rem;
+  background-image: url("../img/items/instalation.jpg");
+  background-size: cover;
+  background-position: right;
+}
+.toiletandbidet-bg {
+  height: 30rem;
+  background-image: url("../img/items/toiletandbidet.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.towelheated-bg {
+  height: 30rem;
+  background-image: url("../img/items/towelheated.jpg");
+  background-size: cover;
+  background-position: top;
+}
+.tile-bg {
+  height: 30rem;
+  background-image: url("../img/items/tile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hotfloor-bg {
+  height: 30rem;
+  background-image: url("../img/items/hotfloor.jpg");
+  background-size: cover;
+}
+.bathroomfurniture-bg {
+  height: 30rem;
+  background-image: url("../img/items/bathroomfurniture.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.bathroom-bg,
+.faucet-bg,
+.sink-bg,
+.showercabin-bg,
+.instalation-bg,
+.toiletandbidet-bg,
+.towelheated-bg,
+.tile-bg,
+.hotfloor-bg,
+.bathroomfurniture-bg {
+  width: 100%;
+}
+
+.brand {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 4rem;
+  &-logo {
+    margin: 1rem auto;
+    max-width: 95%;
+  }
+}

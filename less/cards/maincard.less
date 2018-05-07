@@ -1,0 +1,62 @@
+.main-card {
+  .regular;
+  .boxShadow;
+  background-color: #fff;
+  max-width: 21rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  &-photo {
+    width: 100%;
+    cursor: pointer;
+  }
+  &-title {
+    font-size: 1.4rem;
+    margin: 1rem 1rem 0 1rem;
+  }
+  &-text {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 1rem 1rem 0 1rem;
+  }
+  &-price {
+    .bold;
+    margin-left: 1rem;
+    padding: 1rem 0;
+    display: block;
+    font-size: 2rem;
+  }
+  &-buy {
+    .light;
+    .boxShadow;
+    background-color: @hoverEff;
+    color: #fff;
+    margin-left: 1rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    padding: 0.8rem 1.2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    &:hover {
+      .regular;
+    }
+  }
+  &-basket {
+    .light;
+    .boxShadow;
+    background-color: #fff;
+    display: inline-block;
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    padding: 0.8rem 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    &:hover {
+      .regular;
+    }
+  }
+}
