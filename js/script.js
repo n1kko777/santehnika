@@ -133,7 +133,6 @@ window.addEventListener("DOMContentLoaded", function() {
       navHamburger.getElementsByTagName("span")[i].classList.toggle("close");
     }
     navDropdown.classList.toggle("d-n");
-    scrollLock();
   }
   navHamburger.addEventListener("click", () => {
     toggleNavMenu();
