@@ -1,13 +1,26 @@
+@import 'components/preset.less';
+@import 'components/fonts.less';
+@import 'components/mixins.less';
+@import 'components/variables.less';
+@import 'components/default.less';
+@import 'components/animation.less';
+@import 'components/sidebar.less';
+@import 'components/basket.less';
+@import 'components/searchblock.less';
+@import 'cards/maincard.less';
+@import 'cards/basketcard.less';
+
+
 .main {
   padding-left: 4rem;
   background-color: #aeaeae;
-  /* background: url('../img/main-bg.jpg') no-repeat; */
+  background: url('../img/main-bg1.jpg') no-repeat;
   background-size: cover;
 
   &-block {
     display: block;
     padding-top: 30vh;
-    padding-bottom: 6rem;
+    padding-bottom: 7rem;
     align-items: center;
     text-align: center;
     color: #fff;
@@ -51,7 +64,7 @@
 }
 
 .categories {
-  background-color: #f0f0f0;
+  background-color: @defaultBG;
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 2rem;
@@ -161,3 +174,7 @@
     max-width: 95%;
   }
 }
+
+
+@import 'components/footer.less';
+@import 'components/media.less';
