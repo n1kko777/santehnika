@@ -158,8 +158,8 @@ window.addEventListener("DOMContentLoaded", function() {
   /* footer company information click listner */
   footerInfo.addEventListener('click', function(event) {
     let target = event.target;
-    if (target.classList.contains('contacts')) {
-      window.location.href = '/contacts.html';
+    if (target.classList.contains('about')) {
+      window.location.href = '/about.html';
     }
     
   });

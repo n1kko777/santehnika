@@ -30,6 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 </head>
+
 <body>
   <nav>
     <div class="mobile-nav">
@@ -186,32 +187,80 @@
       </div>
     </div>
   </div>
-  <section class="catalog content">
+  <section class="content">
     <div class="container">
-      <div class="main-card">
-        <img class="main-card-photo" src="img/main-bg.jpg" alt="">
-        <h4 class="main-card-title">Заголовок</h4>
-        <p class="main-card-text">Далеко-далеко за словесными горами в стране.</p>
-        <span class="main-card-price">990 &#8381;</span>
-        <button class="main-card-buy">Купить</button>
-        <button class="main-card-basket">В корзину</button>
+      <div class="about-block">
+          <h2>О компании</h2>
+          <p>Компания начала свою работу с 1999 года с разработки дизайн проектов, отделки и ремонтов помещений, а также проектирование
+            и изготовление мебели для различного назначения для частных заказчиков на базе собственного производства.</p>
+          <p>Со временем мы начали поставки напрямую от европейских поставщиков среди них кухни Berloni Aran Scavolini Pedini,
+            бытовая техника Siemens Bosch Neff Liebbher и другие работая по прямой схеме минуя посредников и выделяя качественных
+            производителей с гибкой ценой политикой.</p>
+          <p>С 2010 года начали строить коттеджи под ключ, где заключили ряд прямых контрактов с поставщиками электрики, сантехники
+            и разных других строительных и отделочных материалов.</p>
+          <p>Получилась отличная подборка производителей от которых мы получили выгодные дилерские условия, которые в комплексе
+            готовы транслировать нашим клиентам.</p>
       </div>
-      <div class="main-card">
-        <img class="main-card-photo" src="img/main-bg.jpg" alt="">
-        <h4 class="main-card-title">Заголовок</h4>
-        <p class="main-card-text">Далеко-далеко за словесными горами в стране.</p>
-        <span class="main-card-price">990 &#8381;</span>
-        <button class="main-card-buy">Купить</button>
-        <button class="main-card-basket">В корзину</button>
+      <!-- /.about-block -->
+      <div class="team-block">
+        <h2>Наша команда</h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img src="https://dummyimage.com/200X300/000/fff" alt="Иванов Иван">
+            <h4>Иванов Иван</h4>
+            <span>Менеджер коммпании</span>
+          </div>
+          <!-- /.col-12 col-md-4 -->
+          <div class="col-12 col-md-4">
+            <img src="https://dummyimage.com/200X300/000/fff" alt="Иванов Иван">
+            <h4>Иванов Иван</h4>
+            <span>Директор</span>
+          </div>
+          <!-- /.col-12 col-md-4 -->
+          <div class="col-12 col-md-4">
+            <img src="https://dummyimage.com/200X300/000/fff" alt="Иванов Иван">
+            <h4>Иванов Иван</h4>
+            <span>Менеджер коммпании</span>
+          </div>
+          <!-- /.col-12 col-md-4 -->
+        </div>
       </div>
-      <div class="main-card">
-        <img class="main-card-photo" src="img/main-bg.jpg" alt="">
-        <h4 class="main-card-title">Заголовок</h4>
-        <p class="main-card-text">Далеко-далеко за словесными горами в стране.</p>
-        <span class="main-card-price">990 &#8381;</span>
-        <button class="main-card-buy">Купить</button>
-        <button class="main-card-basket">В корзину</button>
-      </div>
+      <!-- /.team-block -->
+      <form class="contact-form">
+          <div class="success"><span>
+               Спасибо за заявку!<br/>Мы скоро с вами свяжемся.</span></div>
+          <input type="hidden" name="project_name" value="inter5000.ru"/>
+          <input type="hidden" name="admin_email" value="2680555@gmail.com"/>
+          <input type="hidden" name="form_subject" value="Заявка с сайта inter5000.ru"/>
+          <h2>Связаться с нами</h2>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <label for="inv_name">Ваше имя</label>
+            </div>
+            <div class="col-sm-12 col-md-8">
+              <input type="text" name="inv_name" required/>
+            </div> 
+            <div class="col-sm-12 col-md-4">
+              <label for="inv_phone">Ваш номер телефона</label>
+            </div>
+            <div class="col-sm-12 col-md-8">
+              <input type="tel" name="inv_phone" required/>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label for="inv_email">Ваш адрес e-mail</label>
+            </div>
+            <div class="col-sm-12 col-md-8">
+              <input type="email" name="inv_email" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4"></div> 
+            <div class="col-sm-12 col-md-8">
+              <button type="submit">Отправить</button>
+            </div>
+          </div>
+        </form>
+      <!-- /.contact-form -->
     </div>
   </section>
   <footer>
@@ -232,13 +281,13 @@
                 </picture>
                 8 (343) 268 05 55
               </a>
-              <a href="#" class="block-info-call_time">
+              <!-- <a href="#" class="block-info-call_time">
                 <picture>
                   <source type="image/svg+xml" srcset="img/icons/clock.svg">
                   <img src="img/icons/clock.png" alt="clock">
                 </picture>
                 ПН - ВС: 9.00 - 21.00
-              </a>
+              </a> -->
               <a href="mailto:2680555@gmail.com" class="block-info-call_mail">
                 <picture>
                   <source type="image/svg+xml" srcset="img/icons/mail.svg">

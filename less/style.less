@@ -10,7 +10,7 @@
 @import 'cards/maincard.less';
 @import 'cards/basketcard.less';
 
-
+/* index.html */
 .main {
   padding-left: 4rem;
   background-color: #aeaeae;
@@ -175,6 +175,60 @@
   }
 }
 
+/* bathroom.html */
+.content {
+  padding: 8rem 0;
+  padding-left: 4rem;
+  background-color: @defaultBG;
+}
+
+/* about.html */
+.about-block {
+  .boxShadow;
+  background-color: #ffffff;
+  padding: 2rem;
+  h2 {
+    .bold;
+    font-size: 2rem;
+    padding: 2rem 0;
+    text-transform: uppercase;
+  }
+  p {
+    .light;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+  }
+}
+.team-block {
+  .boxShadow;
+  background-color: #ffffff;
+  padding: 2rem;
+  h2 {
+    .bold;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  h4 {
+    .regular;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+  }
+  span {
+    .light;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@import 'components/form.less';
 
 @import 'components/footer.less';
 @import 'components/media.less';
